@@ -1,0 +1,444 @@
+<style>
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .play {
+    background-color: white;
+    height: 1080px;
+    position: relative;
+    width: 1920px;
+  }
+
+  .play .back-ground {
+    background-color: transparent;
+    height: 1080px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1920px;
+  }
+
+  .play .icon-search {
+    background-color: transparent;
+    height: 36px;
+    left: 1197px;
+    position: absolute;
+    top: 90px;
+    width: 34px;
+  }
+
+  .play .image-14 {
+    background-color: transparent;
+    height: 36px;
+    left: 63px;
+    position: absolute;
+    top: 44px;
+    width: 115px;
+  }
+
+  .play .list {
+    background-color: transparent;
+    height: 48px;
+    left: 178px;
+    position: absolute;
+    top: 201px;
+    width: 267px;
+  }
+
+  .play .next {
+    background-color: transparent;
+    height: 73px;
+    left: 677px;
+    position: absolute;
+    top: 796px;
+    width: 521px;
+  }
+
+  .play .rectang-list {
+    background-color: var(--ebb);
+    height: 603px;
+    left: 25px;
+    opacity: 0.9;
+    position: absolute;
+    top: 178px;
+    transform: rotate(180deg);
+    width: 573px;
+  }
+
+  .play .rectangle--con-scroll {
+    background-color: var(--chicago);
+    border-radius: 6px;
+    height: 36px;
+    left: 541px;
+    position: absolute;
+    top: 518px;
+    width: 35px;
+  }
+
+  .play .rectangle-41 {
+    background-color: var(--mist-gray);
+    height: 173px;
+    left: 1621px;
+    position: absolute;
+    top: 306px;
+    width: 217px;
+  }
+
+  .play .rectangle-back {
+    background-color: white;
+    border-radius: 10px;
+    height: 73px;
+    left: 25px;
+    opacity: 0.85;
+    position: absolute;
+    top: 26px;
+    width: 192px;
+  }
+
+  .play .rectangle-list-song {
+    background-color: var(--mist-gray);
+    height: 337px;
+    left: 47px;
+    opacity: 0.9;
+    position: absolute;
+    top: 426px;
+    width: 529px;
+  }
+
+  .play .rectangle-play {
+    background-color: transparent;
+    height: 51px;
+    left: 501px;
+    position: absolute;
+    top: 311px;
+    width: 59px;
+  }
+
+  .play .rectangle-run-C61RwL {
+    background-color: var(--mist-gray);
+    height: 89px;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    top: 886px;
+    width: 1920px;
+  }
+
+  .play .rectangle-run-VMr6Om {
+    background-color: var(--mist-gray);
+    height: 89px;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    top: 991px;
+    width: 1920px;
+  }
+
+  .play .rectangle-scroll {
+    background-color: white;
+    border-radius: 5px;
+    height: 337px;
+    left: 543px;
+    opacity: 0.65;
+    position: absolute;
+    top: 426px;
+    width: 33px;
+  }
+
+  .play .rectangle-search-C61RwL {
+    background-color: var(--white);
+    border-radius: 42px;
+    height: 88px;
+    left: 633px;
+    opacity: 0.5;
+    position: absolute;
+    top: 62px;
+    width: 653px;
+  }
+
+  .play .rectangle-search-VMr6Om {
+    background-color: transparent;
+    border-radius: 42px;
+    height: 64px;
+    left: 121px;
+    opacity: 0.5;
+    position: absolute;
+    top: 261px;
+    width: 380px;
+  }
+
+  .play .rectangle-song-run {
+    background-color: var(--mist-gray);
+    border-radius: 27px;
+    height: 123px;
+    left: 47px;
+    opacity: 0.9;
+    position: absolute;
+    top: 275px;
+    width: 529px;
+  }
+
+  .play .search {
+    background-color: transparent;
+    height: 31px;
+    left: 848px;
+    position: absolute;
+    top: 90px;
+    width: 180px;
+  }
+
+  .play .span1-enAwut {
+    color: rgba(214, 248, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span1-u1U9TR {
+    color: rgba(214, 248, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span2-enAwut {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span2-u1U9TR {
+    color: rgba(248, 6, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span3-u1U9TR {
+    color: rgba(214, 248, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span4-u1U9TR {
+    color: rgba(248, 6, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .span5-u1U9TR {
+    color: rgba(214, 248, 6, 1);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .play .we-wish-yo-happy-7020 {
+    background-color: transparent;
+    height: 44px;
+    left: 179px;
+    letter-spacing: -0.66px;
+    line-height: 0.1px;
+    position: absolute;
+    text-align: center;
+    top: 908px;
+    width: 847px;
+  }
+
+  .play .we-wish-yo-ng-to-7019 {
+    background-color: transparent;
+    height: 52px;
+    left: 178px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 1007px;
+    width: auto;
+  }
+
+  .play .we-wish-yo-tmas-11616 {
+    background-color: transparent;
+    height: 104px;
+    left: 63px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 284px;
+    width: auto;
+  }
+
+  .play .x-everythin-need-11627 {
+    background-color: transparent;
+    height: 89px;
+    left: 36px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 450px;
+    width: 420px;
+  }
+
+  .play .x-little-do-know-11630 {
+    background-color: transparent;
+    height: 89px;
+    left: 51px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 664px;
+    width: 420px;
+  }
+
+  .play .x-love-the---lie-11626 {
+    background-color: transparent;
+    height: 109px;
+    left: 42px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 560px;
+    width: 420px;
+  }
+
+  .play .x000025-11631 {
+    background-color: transparent;
+    height: 52px;
+    left: 1730px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 911px;
+    width: auto;
+  }
+
+  .play .x000436-11632 {
+    background-color: transparent;
+    height: 52px;
+    left: 1730px;
+    letter-spacing: -0.66px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 1007px;
+    width: auto;
+  }
+
+  .roboto-bold-canary-44px {
+    color: var(--canary);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .roboto-bold-sand-dune-44px {
+    color: var(--sand-dune);
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .roboto-bold-white-44px {
+    color: white;
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .roboto-bold-white-44px-2 {
+    color: transparent;
+    font-family: "Roboto", Helvetica, Arial, serif;
+    font-size: 44px;
+  }
+
+  :root {
+    --canary: rgba(63, 33, 249, 1);
+    --chicago: rgba(90, 90, 90, 1);
+    --ebb: rgba(227, 227, 227, 0.88);
+    --mist-gray: rgba(196, 196, 196, 1);
+    --sand-dune: rgba(132, 104, 104, 1);
+    --white: rgba(255, 255, 255, 0.8);
+  }
+
+  .valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
+<div class="play">
+  <div class="rectangle-41"></div>
+  <img class="back-ground"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/background-1@1x.svg" />
+  <div class="rectangle-search-C61RwL"></div>
+  <div class="rectangle-run-C61RwL"></div>
+  <h1 class="x000025-11631 valign-text-middle roboto-bold-white-44px border-class-1">00:00:25</h1>
+  <div class="rectangle-run-VMr6Om"></div>
+  <div class="x000436-11632 valign-text-middle roboto-bold-white-44px border-class-1">00:04:36</div>
+  <div class="we-wish-yo-ng-to-7019 valign-text-middle roboto-bold-white-44px-2 border-class-1">
+    <span>
+      <span class="span1-enAwut">We wish you a Merry Christmas and Happy</span><span class="span2-enAwut"> New Year.
+        Good tidings we bring to </span>
+    </span>
+  </div>
+  <div class="we-wish-yo-happy-7020 valign-text-middle roboto-bold-white-44px-2 border-class-1">
+    <span>
+      <span class="span1-u1U9TR">We </span><span class="span2-u1U9TR">wish</span><span class="span3-u1U9TR"> you a Merry
+      </span><span class="span4-u1U9TR">Christmas</span><span class="span5-u1U9TR"> and Happy |</span>
+    </span>
+  </div>
+  <img class="icon-search"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/iconsearch@2x.png" />
+  <img class="search"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/search@2x.png" />
+  <div class="rectang-list"></div>
+  <div class="rectangle-search-VMr6Om"></div>
+  <a href="selectPer.html">
+    <div class="rectangle-back"></div>
+    <img class="image-14"
+      src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/image-14@2x.png" />
+  </a>
+  <img class="next"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/next@1x.png" />
+  <img class="list"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/list@2x.png" />
+  <div class="rectangle-song-run"></div>
+  <div class="rectangle-list-song"></div>
+  <div class="x-everythin-need-11627 valign-text-middle roboto-bold-sand-dune-44px border-class-1">
+    - Everything I Need
+  </div>
+  <div class="x-love-the---lie-11626 valign-text-middle roboto-bold-sand-dune-44px border-class-1">
+    - Love The Way You Lie
+  </div>
+  <div class="we-wish-yo-tmas-11616 valign-text-middle roboto-bold-canary-44px border-class-1">
+    We Wish You a Merry <br />Christmas
+  </div>
+  <img class="rectangle-play"
+    src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/rectangleplay@2x.png" />
+  <div class="rectangle-scroll"></div>
+  <div class="rectangle--con-scroll"></div>
+  <div class="x-little-do-know-11630 valign-text-middle roboto-bold-sand-dune-44px border-class-1">
+    - Little Do You Know
+  </div>
+</div>
