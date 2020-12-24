@@ -1,157 +1,212 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Typing game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+    <!-- <link type="text/css" rel="stylesheet" href="/instruction-screen/index.css"> -->
+
+</head>
+
 <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  box-sizing: border-box;
-}
-.last-syllable {
-  align-items: flex-end;
-  background-color: white;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/image-1@1x.jpg);
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  height: 1080px;
-  justify-content: flex-start;
-  padding: 49px 154px;
-  width: 1920px;
-}
-.last-syllable .back-1 {
-  background-color: transparent;
-  height: 27px;
-  left: 30px;
-  position: absolute;
-  top: 27px;
-  width: 20px;
-}
-.last-syllable .last-syllable-1 {
-  background-color: transparent;
-  height: 47px;
-  left: 606px;
-  position: absolute;
-  top: 192px;
-  width: 314px;
-}
-.last-syllable .lorem-ipsu--ipsum-551 {
-  background-color: transparent;
-  height: 232px;
-  left: 101px;
-  letter-spacing: -0.36px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 259px;
-  width: 1376px;
-}
-.last-syllable .lorem-ipsu--ipsum-552 {
-  background-color: transparent;
-  height: 232px;
-  left: 105px;
-  letter-spacing: -0.36px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 480px;
-  width: 1372px;
-}
-.last-syllable .overlap-group-C61RwL {
-  background-color: transparent;
-  flex-shrink: 0;
-  height: 879px;
-  margin-top: 57px;
-  position: relative;
-  width: 1569px;
-}
-.last-syllable .rectangle-6 {
-  background-color: transparent;
-  height: 879px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 1569px;
-}
-.last-syllable .rectangle-7 {
-  background-color: var(--mercury);
-  height: 607px;
-  left: 1558px;
-  position: absolute;
-  top: 272px;
-  width: 11px;
-}
-.last-syllable .steno-arcade-2 {
-  align-self: center;
-  background-color: transparent;
-  flex-shrink: 0;
-  height: 65px;
-  width: 684px;
-}
-.last-syllable .typing-intruction-2 {
-  background-color: transparent;
-  height: 87px;
-  left: 424px;
-  position: absolute;
-  top: 40px;
-  width: 721px;
-}
-.roboto-regular-normal-cloud-burst-24px {
-  color: var(--cloud-burst);
-  font-family: "Roboto-Regular", Helvetica, Arial, serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-}
-:root {
-  --cloud-burst: rgba(42, 42, 87, 1);
-  --mercury: rgba(229, 229, 229, 1);
-}
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
 
+    body {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 2%;
+    }
+
+    .instruction-title {
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+    }
+
+    .scroll-content {
+        margin: 10px, 10px;
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        width: 100%;
+        height: 70%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+    }
+
+    .instruction-bottom {
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+    }
+
+    .button {
+        border: transparent;
+        background-color: red;
+        /* outline: none; */
+        border-radius: 5px;
+        padding: 10px 65px;
+        font-size: 30px;
+        text-decoration: none;
+        margin: 20px;
+        color: black;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
 </style>
-
-
-<div class="last-syllable">
-    <img
-      class="steno-arcade-2"
-      src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/stenoarcade-1@1x.png"
-    />
-    <div class="overlap-group-C61RwL">
-      <img
-        class="rectangle-6"
-        src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/rectangle-6@1x.svg"
-      />
-      <a href="introduction.html">
-      <img
-        class="back-1"
-        src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/back-2@2x.png"
-      />
-      </a>
-      <img
-        class="last-syllable-1"
-        src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/last-syllable-1@2x.png"
-      />
-      <img
-        class="typing-intruction-2"
-        src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/typing-intruction-1@1x.png"
-      />
-      <h1 class="lorem-ipsu--ipsum-551 valign-text-middle roboto-regular-normal-cloud-burst-24px border-class-1">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-        type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </h1>
-      <div class="lorem-ipsu--ipsum-552 valign-text-middle roboto-regular-normal-cloud-burst-24px border-class-1">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-        type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </div>
-      <div class="rectangle-7"></div>
+<body style="background-image: url('./images/backGround.png');">
+    <div class="wrapper container">
+        <img src="./images/gameName.png" />
+        <div class="wrapper container d-flex flex-column">
+            <div class="instruction-title d-flex flex-row justify-content-center"
+                style="font-weight: bold; font-size: 40px;">
+                Quy tắc gõ âm cuối
+            </div>
+            <div class="scroll-content">
+                <div style="font-weight: 500; font-size: 25px;">1. Nhóm các phụ âm có cùng dạng chữ với phím tốc kí và không cần ghi nhớ </div>
+                <div class="d-flex flex-row">
+                    <table class="table table-striped container" style="width: 40%; padding: 10px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Âm cuối</th>
+                                <th scope="col">Phím tốc kí</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">n</th>
+                                <td>N</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="font-weight: 500; font-size: 25px;">2. Nhóm các phụ âm có cách phát âm gần nhau </div>
+                <div class="d-flex flex-row">
+                    <table class="table table-striped container" style="width: 40%; padding: 10px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Âm cuối</th>
+                                <th scope="col">Phím tốc kí</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">o (sao, nhao)</th>
+                                <td>-JK</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">u (sau, nhau)</th>
+                                <td>-JG</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">i (tai, tôi)</th>
+                                <td>-J</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">y (tay, xây)</th>
+                                <td>-JN</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="font-weight: 500; font-size: 25px;">3. Nhóm các phụ âm có cách viết gần nhau </div>
+                <div class="d-flex flex-row">
+                    <table class="table table-striped container" style="width: 40%; padding: 10px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Âm cuối</th>
+                                <th scope="col">Phím tốc kí</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">c (các)</th>
+                                <td>-NK</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ch (cách)</th>
+                                <td>-GK</td>
+                            </tr>                     
+                        </tbody>
+                    </table>
+                </div>
+                <div style="font-weight: 500; font-size: 25px;">4. Nhóm các phụ âm không có điểm ghi nhớ </div>
+                <div class="d-flex flex-row">
+                    <table class="table table-striped container" style="width: 40%;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Âm cuối</th>
+                                <th scope="col">Phím tốc kí</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">p</th>
+                                <td>-TK</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">t</th>
+                                <td>-NT</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ng</th>
+                                <td>-G</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">nh</th>
+                                <td>-K</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">m</th>
+                                <td>-T</td>
+                            </tr>                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="instruction-bottom"></div>
+            <div class="d-flex justify-content-center">
+                <a href="introduction.html">
+                    <button class="button" style="background-color: #FFFFFF!important;opacity: 0.5;border-radius: 5px;">
+                        Quay lại
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/instruction-screen/index.js"></script>
+</body>
+
+</html>

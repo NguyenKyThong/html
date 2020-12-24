@@ -1,167 +1,137 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Typing game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+    <!-- <link type="text/css" rel="stylesheet" href="/instruction-screen/index.css"> -->
+
+</head>
 <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
     * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 
-    .instructions {
-        align-items: flex-end;
-        background-color: white;
-        background-image: url(https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/image-1@1x.jpg);
-        background-size: 100% 100%;
-        display: flex;
-        flex-direction: column;
-        height: 1080px;
-        justify-content: flex-start;
-        padding: 49px 154px;
-        width: 1920px;
+    body {
+        font-family: 'Raleway', sans-serif;
     }
 
-    .instructions .back-2 {
-        background-color: transparent;
-        height: 27px;
-        left: 31px;
-        position: absolute;
-        top: 20px;
-        width: 20px;
+    .wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 2%;
     }
 
-    .instructions .first-syllable-1 {
-        background-color: transparent;
-        height: 47px;
-        left: 644px;
-        position: absolute;
-        top: 188px;
-        width: 317px;
+    .instruction-title {
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
     }
 
-    .instructions .last-syllable-1 {
-        background-color: transparent;
-        height: 47px;
-        left: 647px;
-        position: absolute;
-        top: 504px;
-        width: 314px;
+    .scroll-content {
+        margin: 10px, 10px;
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        width: 100%;
+        height: 70%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
     }
 
-    .instructions .main-syllable-1 {
-        background-color: transparent;
-        height: 47px;
-        left: 647px;
-        position: absolute;
-        top: 346px;
-        width: 314px;
+    .instruction-bottom {
+        padding: 10px;
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
     }
 
-    .instructions .overlap-group-C61RwL {
-        background-color: transparent;
-        flex-shrink: 0;
-        height: 770px;
-        margin-top: 57px;
+    .button {
+        border: transparent;
+        background-color: red;
+        /* outline: none; */
+        border-radius: 5px;
+        padding: 10px 65px;
+        font-size: 30px;
+        text-decoration: none;
+        margin: 20px;
+        color: black;
         position: relative;
-        width: 1569px;
-    }
-
-    .instructions .rectangle- {
-        background-color: var(--spring-frost);
-        height: 97px;
-        left: 555px;
-        position: absolute;
-        top: 479px;
-        width: 495px;
-    }
-
-    .instructions .rectangle-1 {
-        background-color: transparent;
-        height: 770px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 1569px;
-    }
-
-    .instructions .rectangle-2 {
-        background-color: var(--spring-frost);
-        height: 97px;
-        left: 555px;
-        position: absolute;
-        top: 163px;
-        width: 495px;
-    }
-
-    .instructions .rectangle-3 {
-        background-color: var(--spring-frost);
-        height: 97px;
-        left: 555px;
-        position: absolute;
-        top: 321px;
-        width: 495px;
-    }
-
-    .instructions .steno-arcade-1 {
-        align-self: center;
-        background-color: transparent;
-        flex-shrink: 0;
-        height: 65px;
-        width: 684px;
-    }
-
-    .instructions .typing-intruction-1 {
-        background-color: transparent;
-        height: 87px;
-        left: 424px;
-        position: absolute;
-        top: 40px;
-        width: 721px;
-    }
-
-    .instructions .x-1 {
-        background-color: transparent;
-        height: 31px;
-        left: 1518px;
-        position: absolute;
-        top: 16px;
-        width: 25px;
-    }
-
-    :root {
-        --spring-frost: rgba(133, 235, 32, 1);
+        display: inline-block;
+        cursor: pointer;
     }
 </style>
+<body style="background-image: url('./images/backGround.png');">
+    <div class="wrapper container">
+        <img src="./images/gameName.png" />
+        <div class="wrapper container d-flex flex-column">
+            <div class="instruction-title d-flex flex-row justify-content-center"
+                style="font-weight: bold; font-size: 40px;">
+                Quy tắc gõ
+            </div>
+            <div class="scroll-content" style="height: 60%!important;">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-center">
+                            <a href="firstSyllable.html">
+                                <button class="button">
+                                    Âm đầu
+                                </button>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="mainSyllable.html">
+                                <button class="button" style="background-color: rgb(38, 218, 38)!important;">
+                                    Âm chính
+                                </button>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="lastSyllable.html">
+                                <button class="button" style="background-color: rgb(6, 217, 245)!important;">
+                                    Âm cuối
+                                </button>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="homeLogin.html">
+                                <button class="button" style="background-color: rgb(120, 124, 124)!important;">
+                                    Quay lại
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-
-<div class="instructions">
-    <img class="steno-arcade-1"
-        src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/stenoarcade-1@1x.png" />
-    <div class="overlap-group-C61RwL">
-        <img class="rectangle-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/rectangle-1@1x.svg" />
-        <div class="rectangle-"></div>
-        <img class="typing-intruction-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/typing-intruction-1@1x.png" />
-        <a href="homeLogin.html">
-            <img class="x-1"
-                src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/x-1@2x.png" />
-        </a>
-        <a href="firstSyllable.html">
-            <div class="rectangle-2"></div>
-            <img class="first-syllable-1"
-                src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/first-syllable-1@2x.png" />
-        </a>
-        <a href="mainSyllable.html">
-            <div class="rectangle-3"></div>
-            <img class="main-syllable-1"
-                src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/main-syllable-1@2x.png" />
-        </a>
-        <a href="lastSyllable.html">
-            <div class="rectangle-"></div>
-            <img class="last-syllable-1"
-                src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/last-syllable-1@2x.png" />
-        </a>
-        <a href="homeLogin.html">
-            <img class="back-2"
-                src="https://anima-uploads.s3.amazonaws.com/projects/5fe3375f8e33088fa4cff311/releases/5fe338a8ac02c0e91b35bb04/img/back-2@2x.png" />
-        </a>
+            </div>
+            <div class="instruction-bottom"></div>
+        </div>
     </div>
-</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/instruction-screen/index.js"></script>
+</body>
+
+</html>
